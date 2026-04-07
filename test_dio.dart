@@ -1,0 +1,1 @@
+﻿import 'package:dio/dio.dart'; void main() async { var d = Dio(BaseOptions(baseUrl: 'http://10.0.2.2:5000/api')); try { await d.get('/messages'); } on DioException catch (e) { print(e.requestOptions.uri); } }
